@@ -1,0 +1,18 @@
+TARGETNAME=TestingApplication
+TARGETPATH=obj
+TARGETTYPE=PROGRAM
+UMTYPE=console
+UMENTRY=mainCRTStartup
+
+USE_MSVCRT=1
+
+MSC_WARNING_LEVEL = $(MSC_WARNING_LEVEL) -WX
+
+C_DEFINES = $(CFASTFLAGS) $(C_DEFINES) -DWIN64 
+
+AMD64_SOURCES = entry.asm
+SOURCES=
+
+TARGETLIBS = $(TARGETLIBS) \
+             $(SDK_LIB_PATH)\user32.lib \
+             $(SDK_LIB_PATH)\kernel32.lib
