@@ -1,0 +1,16 @@
+TARGETNAME=reverse
+TARGETPATH=obj
+TARGETTYPE=PROGRAM
+UMTYPE=console
+UMENTRY=main
+
+SOURCES= reverse.c
+AMD64_SOURCES=amd64\reverse64.asm
+
+INCLUDES=$(INCLUDES);..\inc
+
+TARGETLIBS = $(TARGETLIBS) \
+             $(SDK_LIB_PATH)\user32.lib
+
+
+USE_MSVCRT=1
